@@ -22,6 +22,8 @@ class Cuenta{
         
         if($quantitat > 0 && strpos($quantitatString, ".")+2 < strlen($quantitatString)){
             $this->saldo += $quantitat;
+        }else {
+        throw new Exception("Cannot ingresar a negative amount.");
         }
     }
 
