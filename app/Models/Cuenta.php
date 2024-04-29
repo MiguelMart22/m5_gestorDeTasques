@@ -28,8 +28,10 @@ class Cuenta{
     }
 
     public function transferir(Cuenta $cuenta, float $quantitat): void {
+        if ($this->saldo > 0){
         $this->saldo -= $quantitat;
         $cuenta->ingresar($quantitat);
+        }
     }
 
 
