@@ -13,7 +13,7 @@ class CuentaTest extends TestCase
         $this->assertNotNull($cuenta);
     }
 
-    public function test_cuenta_a_cero(): void2
+    public function test_cuenta_a_cero(): void
     {
         $cuenta = new Cuenta();
         $this->assertEquals(0, $cuenta->getSaldo());
@@ -54,7 +54,7 @@ class CuentaTest extends TestCase
         $cuenta2 = new Cuenta();
 
         $cuenta->ingresar(-100);
-        $cuenta->transferir(cuenta2,500);
+        $cuenta->transferir($cuenta2,500);
 
         $this->assertEquals(0, $cuenta->getSaldo());
     }
