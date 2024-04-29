@@ -25,9 +25,10 @@ class Cuenta{
         }
     }
 
-    public function transferir(Cuenta $cuenta,float $quantitat):void {
-        $this->saldo-=$quantitat;
-        $cuenta+=$quantitat;
+    public function transferir(Cuenta $cuenta, float $quantitat): void {
+        $this->saldo -= $quantitat;
+        $cuenta->ingresar($quantitat);
     }
+
 
 }
