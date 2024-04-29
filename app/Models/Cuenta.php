@@ -23,7 +23,7 @@ class Cuenta{
         if($quantitat > 0 && strpos($quantitatString, ".")+2 < strlen($quantitatString)){
             $this->saldo += $quantitat;
         }else {
-            $this->saldo = max(0, $this->saldo);
+            $this->saldo = 0;
         }
     }
 
